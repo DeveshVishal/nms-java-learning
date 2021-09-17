@@ -13,46 +13,34 @@ public class FloatArray {
 				           45.5f , 60.8f , 85.5f , 94.8f
 	        			  } ;
 		
-		System.out.println("Enter Number to Search"); 
+		System.out.println("Enter Number to Search Previous Number"); 
 		
 		float key = in.nextFloat();
-		int i = 0;
-		for(i = 0; i<valueA.length; i++) {
-			if(valueA[i] == key) {
-				System.out.println(valueA[i]);
-				i = -1;
-				break;
+		float ans = 0;
+		
+		for(int i = 0; i<valueA.length; i++) {
+			if(valueA[i] < key) {
+				ans = valueA[i];
 			}
 		}
 		
-		if(i != -1) {
-			System.out.println(key + " na");
-		}
+		System.out.println(ans);
 		
-		System.out.println("Enter a Number");
+		System.out.println("Enter a Number to Search Nearest Number");
 		
 		key = in.nextFloat();
 		
-		String s = String.valueOf(key);
+		ans = Float.MAX_VALUE;
 		
-		float n = Float.valueOf(s);
-		
-		char ans = 0;
-		
-		for(int j = s.length()-1; j>=0; j--) {
-			if(s.charAt(j-1) == '.') {
-				ans = s.charAt(j);
-				break;
+		for(int i = 0; i<valueA.length; i++) {
+			
+			if(Math.abs(key-ans) > Math.abs(key-valueA[i]) ) {
+				ans = valueA[i]; 
 			}
+			
 		}
 		
-		if(ans < '5') {
-			n -= 1;
-			System.out.println((int)Math.floor(n));
-		}
-		else {
-			System.out.println((int)Math.ceil(n));
-		}
+		System.out.println(ans);
 
 	}
 

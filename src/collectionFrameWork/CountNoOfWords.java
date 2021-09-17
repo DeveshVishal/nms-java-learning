@@ -24,6 +24,7 @@ public class CountNoOfWords {
             }
         }
 		
+		System.out.println("No. of words is " + mp.size());
         System.out.println(mp);
 
 	}

@@ -4,7 +4,7 @@ public class StringCombination {
 	
 	public static void permute(String s, int l, int r) {
         if (l == r) {
-            System.out.print(s + " ");
+            System.out.println(s + " ");
         	return;
         }
         for (int i = l; i <= r; i++) {
@@ -16,7 +16,7 @@ public class StringCombination {
 	
 	public static void main(String[] args) {
 		
-		String s = "java";
+		String s = "Yellow";
 		
 		permute(s,0,s.length()-1);
 		
