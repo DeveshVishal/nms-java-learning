@@ -2,10 +2,10 @@ package collectionFrameWork;
 
 public class Pair {
 	
-	String date;
-	int consumption;
+	public String date;
+	public int consumption;
 	
-	Pair(String date, int consumption) {
+	public Pair(String date, int consumption) {
 		this.date = date;
 		this.consumption = consumption;
 	}
